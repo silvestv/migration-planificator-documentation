@@ -257,17 +257,58 @@ For security concerns or to report vulnerabilities, see [SECURITY.md](https://gi
 
 ---
 
-## 🤝 Contributing
+## 🤝 Contributing & Support
 
 This project uses a **dual-license model**:
 - **AGPL-3.0 License** for community/open-source use
 - **Commercial License** available for enterprise support and features
 
-### Contribution Policy
+### 🐛 Report a Bug
 
-At this time, we are primarily focused on maintaining and evolving the core product. For bug reports, feature requests, or questions:
+Found a bug? Please report it via GitHub Issues:
 
-📧 **Contact**: victor.silvestre.dev@gmail.com
+1. **Go to**: [GitHub Issues](https://github.com/silvestv/migration-planificator-documentation/issues/new/choose)
+2. **Select**: "Bug Report" template
+3. **Fill in**:
+   - Bug description
+   - Steps to reproduce
+   - Expected vs actual behavior
+   - Your environment (OS, Node.js version, Angular version)
+   - Command used
+
+**Quick link**: [Report a Bug](https://github.com/silvestv/migration-planificator-documentation/issues/new?template=bug_report.md)
+
+### ✨ Request a Feature
+
+Have an idea for improvement?
+
+1. **Go to**: [GitHub Issues](https://github.com/silvestv/migration-planificator-documentation/issues/new/choose)
+2. **Select**: "Feature Request" template
+3. **Describe**:
+   - The problem you're trying to solve
+   - Your proposed solution
+   - Use case and who benefits
+   - Any mockups or examples
+
+**Quick link**: [Request a Feature](https://github.com/silvestv/migration-planificator-documentation/issues/new?template=feature_request.md)
+
+### ❓ Ask a Question
+
+Need help or have questions?
+
+1. **Go to**: [GitHub Issues](https://github.com/silvestv/migration-planificator-documentation/issues/new/choose)
+2. **Select**: "Question" template
+3. **Check first**:
+   - [FAQ](https://github.com/silvestv/migration-planificator-documentation/blob/master/FAQ.md)
+   - [Troubleshooting Guide](https://github.com/silvestv/migration-planificator-documentation/blob/master/TROUBLESHOOTING.md)
+
+**Quick link**: [Ask a Question](https://github.com/silvestv/migration-planificator-documentation/issues/new?template=question.md)
+
+### 📧 Direct Contact
+
+For urgent issues, security concerns, or commercial inquiries:
+
+📧 **Email**: victor.silvestre.dev@gmail.com
 
 **Enterprise users**: Contact us for commercial licensing, priority support, and custom features.
 
@@ -302,5 +343,15 @@ Built with **ts-morph** (TypeScript AST), **@angular/compiler** (HTML parsing), 
 ---
 
 **🚀 Start planning your Angular migration today!**
+
+---
+
+## ⚠️ Disclaimer
+
+**Personal project** - Use at your own risk. No warranty provided. Not affiliated with any organization.
+
+**Enterprise users**: Pin exact versions, review reports before sharing, add `output/` to `.gitignore`.
+
+---
 
 📧 [Contact](mailto:victor.silvestre.dev@gmail.com) • 📦 [NPM Package](https://www.npmjs.com/package/@silvestv/migration-planificator)
