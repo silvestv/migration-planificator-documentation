@@ -165,7 +165,7 @@ This software is dual-licensed under:
 
 ### Disclaimer
 
-This tool is provided **"AS IS"** without warranty of any kind. See [LICENSE](./LICENSE) for full terms.
+This tool is provided **"AS IS"** without warranty of any kind. See [LICENSE](https://github.com/silvestv/migration-planificator-documentation/blob/master/LICENSE) for full terms.
 
 ### Commercial Support
 

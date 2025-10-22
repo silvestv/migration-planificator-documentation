@@ -12,7 +12,11 @@ Planifiez vos migrations Angular (17→18, 18→19, 19→20) avec analyse AST pr
 [![License](https://img.shields.io/badge/license-AGPL--3.0%20OR%20Commercial-blue)](LICENSE)
 [![Status](https://img.shields.io/badge/statut-alpha-orange)](https://www.npmjs.com/package/@silvestv/migration-planificator)
 
-**[🇬🇧 English] | [🇫🇷 Français](https://unpkg.com/@silvestv/migration-planificator/README.fr.md)**
+**[🇬🇧 English](https://github.com/silvestv/migration-planificator-documentation/blob/master/README.md) | [🇫🇷 Français](https://github.com/silvestv/migration-planificator-documentation/blob/master/README.fr.md)**
+
+---
+
+Pour toute préoccupation de sécurité ou signaler une vulnérabilité, voir [SECURITY.md](https://github.com/silvestv/migration-planificator-documentation/blob/master/SECURITY.md)
 
 ---
 
@@ -248,6 +252,9 @@ npm run build
   # Ou visualisez les fichiers directement
   npm view @silvestv/migration-planificator files
   ```
+
+Pour toute préoccupation de sécurité ou signaler une vulnérabilité, voir [SECURITY.md](https://github.com/silvestv/migration-planificator-documentation/blob/master/SECURITY.md)
+
 ---
 
 ## 🤝 Contribuer
@@ -285,7 +292,7 @@ Pour les entreprises qui doivent utiliser ce logiciel sans les obligations AGPL.
 
 📧 Contact : victor.silvestre.dev@gmail.com
 
-Voir [LICENSE](LICENSE) et [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md) pour les termes complets.
+Voir [LICENSE](https://github.com/silvestv/migration-planificator-documentation/blob/master/LICENSE).
 
 
 ## 🙏 Remerciements

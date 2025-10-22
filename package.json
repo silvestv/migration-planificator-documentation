@@ -1,10 +1,11 @@
 {
   "name": "@silvestv/migration-planificator-documentation",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Professional Angular migration analysis tool with AST precision for version upgrades (17→18, 18→19, 19→20), Nx monorepo refactoring, workload estimation, and technical debt assessment. Interactive HTML reports with Gantt timeline and real-time editing.",
   "main": "dist/src/index.js",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "bin": {
     "migration-planificator": "dist/src/index.js",
@@ -77,9 +78,14 @@
     "description": "Freelance Software Engineer (FR) - Angular / NodeJS & TypeScript Developer"
   },
   "license": "AGPL-3.0-or-later",
-  "homepage": "https://www.npmjs.com/package/@silvestv/migration-planificator",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvestv/migration-planificator-documentation.git"
+  },
+  "homepage": "https://github.com/silvestv/migration-planificator-documentation",
   "bugs": {
-    "email": "victor.silvestre.dev@gmail.com"
+    "email": "victor.silvestre.dev@gmail.com",
+    "url": "https://github.com/silvestv/migration-planificator-documentation/issues"
   },
   "type": "commonjs",
   "engines": {
