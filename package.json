@@ -1,11 +1,12 @@
 {
   "name": "@silvestv/migration-planificator-documentation",
-  "version": "2.0.3",
+  "version": "2.0.0",
   "description": "Professional Angular migration analysis tool with AST precision for version upgrades (17→18, 18→19, 19→20), Nx monorepo refactoring, workload estimation, and technical debt assessment. Interactive HTML reports with Gantt timeline and real-time editing.",
   "main": "dist/src/index.js",
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "provenance": true
   },
   "bin": {
     "migration-planificator": "dist/src/index.js",
@@ -22,7 +23,7 @@
   ],
   "scripts": {
     "prepare": "npm run build",
-    "prepublishOnly": "npm test",
+    "prepublishOnly": "npm test && npm audit --production && npm audit signatures && npm pack --dry-run",
     "build": "npm run build:server && npm run build:client && npm run build:css && npm run copy:data",
     "build:server": "tsc",
     "build:client": "esbuild src/client/index.ts --bundle --minify --outfile=dist/client.bundle.js --platform=browser --target=es2020",
