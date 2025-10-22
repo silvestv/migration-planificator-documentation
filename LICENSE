@@ -1,0 +1,96 @@
+DUAL LICENSE NOTICE
+===================
+
+This software is dual-licensed under:
+1. GNU Affero General Public License v3.0 (AGPL-3.0) for non-commercial use
+2. Commercial License for commercial use
+
+You may choose which license applies to your use of this software.
+
+---
+
+OPTION 1: AGPL-3.0 (Non-Commercial Use)
+========================================
+
+For individuals, academic institutions, non-profit organizations, and open-source projects.
+
+If you distribute this software or provide it as a service, you MUST:
+- Make your complete source code available under AGPL-3.0
+- Include this license and copyright notice
+- Disclose any modifications you made
+
+Copyright (C) 2025 Victor Louis SILVESTRE
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+Full AGPL-3.0 text: https://www.gnu.org/licenses/agpl-3.0.html
+
+---
+
+OPTION 2: COMMERCIAL LICENSE
+==============================
+
+For businesses and enterprises that want to:
+- Use this software in proprietary/closed-source applications
+- Distribute this software without disclosing source code
+- Avoid AGPL-3.0 copyleft obligations
+- Receive priority support and SLA guarantees
+
+A Commercial License is REQUIRED if you:
+- Integrate this software into a commercial product
+- Provide this software as part of a paid service (SaaS, consulting, etc.)
+- Use this software internally in a for-profit company without sharing modifications
+
+Commercial License includes:
+✓ Perpetual usage rights without copyleft
+✓ Priority email/phone support
+✓ Service Level Agreement (SLA)
+✓ Custom feature development options
+✓ Legal indemnification
+✓ No requirement to disclose source code
+
+See COMMERCIAL-LICENSE.md for detailed terms.
+
+For commercial licensing inquiries:
+📧 Email: victor.silvestre.dev@gmail.com
+
+---
+
+CHOOSING YOUR LICENSE
+======================
+
+Use AGPL-3.0 if:
+✓ You're an individual developer, student, or researcher
+✓ Your project is open-source and AGPL-compatible
+✓ You're okay with sharing your modifications publicly
+✓ You're a non-profit or academic institution
+
+Use Commercial License if:
+✓ You work for a for-profit company
+✓ You need to keep your code proprietary
+✓ You want to distribute this without AGPL obligations
+✓ You need enterprise support and SLA
+
+---
+
+WHY DUAL LICENSE?
+=================
+
+This dual-license model ensures:
+- Free access for individuals, researchers, and open-source community
+- Sustainable development through commercial support
+- Protection against cloud providers profiting without contribution
+- Funding for long-term maintenance and feature development
+
+Questions? Contact victor.silvestre.dev@gmail.com

@@ -1,0 +1,101 @@
+{
+  "name": "@silvestv/migration-planificator-documentation",
+  "version": "2.0.2",
+  "description": "Professional Angular migration analysis tool with AST precision for version upgrades (17→18, 18→19, 19→20), Nx monorepo refactoring, workload estimation, and technical debt assessment. Interactive HTML reports with Gantt timeline and real-time editing.",
+  "main": "dist/src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "migration-planificator": "dist/src/index.js",
+    "angular-migration-planner": "dist/src/index.js"
+  },
+  "files": [
+    "dist/src/",
+    "dist/client.bundle.js",
+    "dist/styles.css",
+    "README.md",
+    "README.fr.md",
+    "LICENSE",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test",
+    "build": "npm run build:server && npm run build:client && npm run build:css && npm run copy:data",
+    "build:server": "tsc",
+    "build:client": "esbuild src/client/index.ts --bundle --minify --outfile=dist/client.bundle.js --platform=browser --target=es2020",
+    "build:css": "npx @tailwindcss/cli -i ./src/styles/input.css -o ./dist/styles.css --minify",
+    "copy:data": "node -e \"require('fs').cpSync('src/data', 'dist/src/data', {recursive: true})\"",
+    "start": "node dist/src/index.js",
+    "test": "tsc && node --test dist/tests/**/*.test.js",
+    "test:file": "node --test",
+    "report": "node scripts/generate-report.js",
+    "extract:patterns": "tsc && node dist/scripts/extract-ast-patterns.js",
+    "sync:patterns": "tsc && node dist/scripts/sync-ast-patterns.js",
+    "check:coverage": "tsc && node dist/scripts/check-ast-coverage.js",
+    "analyze-delta": "tsc && node dist/scripts/analyze-delta.js"
+  },
+  "keywords": [
+    "angular",
+    "angular-migration",
+    "angular-upgrade",
+    "angular-analyzer",
+    "angular-cli",
+    "angular-18",
+    "angular-19",
+    "angular-20",
+    "angular-refactoring",
+    "angular-signals",
+    "nx",
+    "nx-monorepo",
+    "nx-workspace",
+    "monorepo-analysis",
+    "migration-tool",
+    "migration-planner",
+    "migration-analysis",
+    "workload-estimation",
+    "technical-debt",
+    "code-modernization",
+    "codebase-audit",
+    "deprecation-analysis",
+    "ast-analysis",
+    "ast-parser",
+    "ts-morph",
+    "typescript-analysis",
+    "code-analysis",
+    "refactoring-tool",
+    "control-flow",
+    "standalone-components",
+    "gantt-timeline",
+    "interactive-report"
+  ],
+  "author": {
+    "name": "Victor SILVESTRE",
+    "email": "victor.silvestre.dev@gmail.com",
+    "url": "https://www.linkedin.com/in/victorsilvestredevweb/",
+    "description": "Freelance Software Engineer (FR) - Angular / NodeJS & TypeScript Developer"
+  },
+  "license": "AGPL-3.0-or-later",
+  "homepage": "https://www.npmjs.com/package/@silvestv/migration-planificator",
+  "bugs": {
+    "email": "victor.silvestre.dev@gmail.com"
+  },
+  "type": "commonjs",
+  "engines": {
+    "node": ">= 20"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.14",
+    "@types/node": "^24.7.0",
+    "@typescript-eslint/typescript-estree": "^8.46.0",
+    "esbuild": "^0.20.0"
+  },
+  "dependencies": {
+    "@angular/compiler": "^20.3.4",
+    "chart.js": "^4.4.0",
+    "tailwindcss": "^4.1.14",
+    "ts-morph": "^27.0.0",
+    "typescript": "^5.9.3"
+  }
+}

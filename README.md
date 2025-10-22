@@ -1,0 +1,299 @@
+# Angular Migration Planner
+
+> **Professional Angular migration analysis tool for version upgrades, Nx monorepo refactoring, and technical debt assessment**
+
+Plan Angular migrations (17→18, 18→19, 19→20) with precision AST analysis, calculate workload estimates, and generate interactive HTML dashboards.
+
+[![npm version](https://img.shields.io/npm/v/@silvestv/migration-planificator.svg)](https://www.npmjs.com/package/@silvestv/migration-planificator)
+[![npm downloads](https://img.shields.io/npm/dm/@silvestv/migration-planificator.svg)](https://www.npmjs.com/package/@silvestv/migration-planificator)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/typescript-5.9-blue)](https://www.typescriptlang.org/)
+[![Tests](https://img.shields.io/badge/tests-451%20passing-success)](./tests)
+[![License](https://img.shields.io/badge/license-AGPL--3.0%20OR%20Commercial-blue)](./LICENSE)
+[![Status](https://img.shields.io/badge/status-alpha-orange)](https://www.npmjs.com/package/@silvestv/migration-planificator)
+
+**[🇬🇧 English]) | [🇫🇷 Français](https://unpkg.com/@silvestv/migration-planificator/README.fr.md)**
+
+---
+
+## 🎯 What Is This?
+
+A comprehensive **Angular migration analysis tool** for:
+
+- 🔄 **Angular Upgrades**: Plan migrations 17→18, 18→19, 19→20 with precise workload estimates
+- 🏢 **Nx Monorepo**: Analyze multi-app/multi-lib workspaces with per-target breakdown
+- 📊 **Technical Debt**: Identify deprecated APIs, anti-patterns, modernization opportunities
+- 💰 **Workload Estimation**: Calculate time (days/hours/minutes) by priority and risk level
+- 🎨 **Code Modernization**: Detect Signals, Control Flow, Standalone component opportunities
+
+Perfect for **engineering teams** and **tech leads** planning Angular upgrades or refactoring initiatives.
+
+---
+
+## 🏆 Why Choose This Tool?
+
+Unlike simple regex-based scanners or manual audits:
+
+- ✅ **88% AST Coverage**: Context-aware detection eliminates false positives (ignores comments, strings, migrated code)
+- ✅ **Cross-File Intelligence**: Connects TypeScript ↔ HTML templates (detects `@Component` + `<router-outlet>` patterns)
+- ✅ **Production-Ready**: 451 passing tests, TypeScript strict mode, optimized batch processing
+- ✅ **Time Saver**: Automated workload calculation + Gantt timeline = instant migration roadmap
+- ✅ **Zero Dependencies**: Pure AST analysis with ts-morph + @angular/compiler (no external APIs)
+
+---
+
+## ✨ Key Features
+
+- **AST Precision**: Context-aware detection via ts-morph + @angular/compiler (88% rule coverage)
+- **Interactive Dashboard**: HTML report with charts, Gantt timeline, real-time workload editing
+- **3 Scan Modes**: AST (precise), Regex (fast), Both (comparative with delta analysis)
+- **85+ Migration Rules**: Covering breaking changes, deprecations, best practices
+- **Cross-File Analysis**: TypeScript ↔ HTML template detection
+- **Multi-Project**: Nx Monorepo and Angular Standalone support
+
+---
+
+## 🎓 Use Cases
+
+### Angular Version Migration
+Upgrade Angular 17→20 with comprehensive change list and time estimates:
+```bash
+npx @silvestv/migration-planificator --scanner=both --rules=all --project-path=/path/to/angular-app
+```
+**Output**: All required changes, time breakdown, risk assessment, interactive planner
+
+### Nx Monorepo Refactoring
+Modernize large Nx workspace with 10+ apps/libs:
+```bash
+npx @silvestv/migration-planificator --scanner=both --project-path=/path/to/nx-workspace
+```
+**Output**: Per-app/lib breakdown, shared dependencies impact, Gantt timeline
+
+### Technical Debt Assessment
+Audit codebase for deprecated APIs:
+```bash
+npx @silvestv/migration-planificator --scanner=ast --rules=[18,19,20]
+```
+**Output**: Deprecated patterns (*ngIf, @Input()), modernization opportunities, file tracking
+
+---
+
+## 🚀 Quick Start
+
+### Installation
+
+#### Via npm (Recommended)
+```bash
+npm install -g @silvestv/migration-planificator
+# or
+npx @silvestv/migration-planificator --project-path=/path/to/your/project
+```
+
+#### From Source
+```bash
+git clone <repository-url>
+cd migration-planificator
+npm install
+npm run build
+```
+
+### Generate First Report
+```bash
+# Analyze current directory
+npx @silvestv/migration-planificator
+
+# Analyze specific project with options
+npx @silvestv/migration-planificator --scanner=both --project-path=/path/to/your/project
+
+# Filter by migration version
+npx @silvestv/migration-planificator --rules=18              # Only Angular 17→18
+npx @silvestv/migration-planificator --rules=[18,19]         # Angular 17→19
+
+# Or using global installation
+migration-planificator --scanner=both --project-path=/path/to/your/project
+```
+
+### Open Report
+```bash
+open output/index.html  # macOS/Linux
+start output/index.html # Windows
+```
+
+---
+
+## 💻 Usage
+
+### After npm Installation
+
+```bash
+# Basic usage
+npx @silvestv/migration-planificator
+
+# With options
+npx @silvestv/migration-planificator --scanner=both --project-path=/path/to/project --rules=all
+
+# Global installation
+npm install -g @silvestv/migration-planificator
+migration-planificator --scanner=ast --project-path=./my-angular-app
+```
+
+### CLI Options
+```bash
+--scanner=<mode>        ast | regex | both [default: ast]
+--project-path=<path>   Path to Angular project [default: current directory]
+--rules=<versions>      18 | [18,19] | all [default: all]
+```
+
+### Examples
+```bash
+# Scan current directory with AST
+npx @silvestv/migration-planificator
+
+# Comparative scan (AST vs Regex) on specific project
+npx @silvestv/migration-planificator --scanner=both --project-path=/workspace/my-app
+
+# Only check Angular 17→18 migration rules
+npx @silvestv/migration-planificator --rules=18
+
+# Multiple versions with regex scanner
+npx @silvestv/migration-planificator --scanner=regex --rules=[18,19]
+```
+
+### For Development (from cloned repository)
+```bash
+# Build and run
+npm run build
+npm start -- --scanner=both --project-path=/path/to/project
+
+# Quick report scripts
+npm run report                          # AST scan + HTML (default)
+npm run report -- --scanner=ast         # AST mode only
+npm run report -- --scanner=regex       # Regex mode only
+npm run report -- --scanner=both        # Comparative AST vs Regex
+```
+
+---
+
+## 📊 Report Contents
+
+### Overview Page
+- Project summary (type, Angular version, apps/libs count)
+- Global statistics (rules detected, total workload)
+- Apps/libs cards with individual analysis
+
+### Workload Page
+- **Charts**: Pie (migrations), Bar (top rules), Doughnut (priorities)
+- **Gantt Timeline**: Sequential migration phases
+- **Hierarchy Tree**: Monorepo → Apps/Libs → Migrations → Priorities → Rules
+- **Real-time Editing**: Click time estimates to adjust, auto-recalculates
+- **Filters**: Risk level, category, rule type, text search
+
+### Delta Page (Both Mode)
+- Rule-by-rule comparison (AST vs Regex accuracy)
+- Divergence analysis, performance stats, recommendations
+
+---
+
+## 📋 Migration Rules
+
+**85 rules** across 3 versions:
+
+| Migration | Mandatory | Recommended | Optional | Total |
+|-----------|-----------|-------------|----------|-------|
+| **17→18** | 8         | 17          | 0        | 25    |
+| **18→19** | 15        | 13          | 9        | 37    |
+| **19→20** | 6         | 7           | 5        | 18    |
+
+### Categories
+`environment` (Node/TS versions) • `imports` (modules) • `api` (Angular APIs) • `routing` (Router) • `template` (directives) • `test` (testing) • `ssr` (SSR) • `reactive` (Signals)
+
+### Risk Levels
+🔴 **Critical** (breaking changes) • 🟠 **High** (major deprecations) • 🟡 **Medium** (improvements) • 🟢 **Low** (optimizations)
+
+---
+
+## 🐛 Troubleshooting
+
+### Invalid Regular Expression
+Ensure JavaScript compatibility:
+```bash
+# (?s) not supported → use [\s\S]*?
+```
+
+### Build Fails
+```bash
+rm -rf dist/
+npm run build
+```
+
+### Empty Report
+- Verify `--project-path` points to Angular root
+- Check `angular.json` or `nx.json` exists
+- Supports Angular 17, 18, 19, 20
+
+---
+
+## 🔒 Security Notice
+
+**This CLI runs entirely on your local machine.** It does **not collect, transmit, or store** any data externally. No network requests are made during analysis.
+
+- ✅ **100% Local Processing** - Your code never leaves your machine
+- ✅ **No Telemetry** - Zero data collection or tracking
+- ✅ **No External APIs** - Pure AST analysis with local libraries
+- ✅ **Signed Package** - Automatically signed by npm registry for integrity verification
+- ✅ **Auditable** - Inspect published package contents anytime:
+  ```bash
+  npm pack @silvestv/migration-planificator
+  tar -tzf silvestv-migration-planificator-*.tgz
+  # Or view files directly
+  npm view @silvestv/migration-planificator files
+  ```
+---
+
+## 🤝 Contributing
+
+This project uses a **dual-license model**:
+- **AGPL-3.0 License** for community/open-source use
+- **Commercial License** available for enterprise support and features
+
+### Contribution Policy
+
+At this time, we are primarily focused on maintaining and evolving the core product. For bug reports, feature requests, or questions:
+
+📧 **Contact**: victor.silvestre.dev@gmail.com
+
+**Enterprise users**: Contact us for commercial licensing, priority support, and custom features.
+
+---
+
+## 📝 License
+
+**Dual Licensed** © 2025 Victor Louis SILVESTRE
+
+This project is available under two licenses:
+
+### 1. AGPL-3.0 (Free for Non-Commercial Use)
+For individuals, students, researchers, non-profits, and open-source projects.
+
+**Requirements if you distribute or provide as a service**:
+- ✅ Make your complete source code available under AGPL-3.0
+- ✅ Share all modifications publicly
+- ✅ Include copyright and license notices
+
+### 2. Commercial License (For Business Use)
+For companies that need to use this software without AGPL obligations.
+
+📧 Contact: victor.silvestre.dev@gmail.com
+
+See [LICENSE](./LICENSE) and [COMMERCIAL-LICENSE.md](./COMMERCIAL-LICENSE.md) for full terms.
+
+
+## 🙏 Acknowledgments
+
+Built with **ts-morph** (TypeScript AST), **@angular/compiler** (HTML parsing), **TailwindCSS** (design), **Chart.js** (visualization)
+
+---
+
+**🚀 Start planning your Angular migration today!**
+
+📧 [Contact](mailto:victor.silvestre.dev@gmail.com) • 📦 [NPM Package](https://www.npmjs.com/package/@silvestv/migration-planificator)
