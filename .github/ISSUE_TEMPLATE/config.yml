@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📧 Email Support
+    url: mailto:victor.silvestre.dev@gmail.com
+    about: Direct email support for urgent issues or commercial inquiries
+  - name: 📦 npm Package
+    url: https://www.npmjs.com/package/@silvestv/migration-planificator
+    about: View package details, version history, and installation instructions
+  - name: 📚 Documentation
+    url: https://github.com/silvestv/migration-planificator/blob/master/README.md
+    about: Read the full documentation and user guide
+  - name: 🔒 Security Policy
+    url: https://github.com/silvestv/migration-planificator/blob/master/SECURITY.md
+    about: Report security vulnerabilities
