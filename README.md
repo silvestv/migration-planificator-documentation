@@ -348,7 +348,10 @@ Built with **ts-morph** (TypeScript AST), **@angular/compiler** (HTML parsing), 
 
 ## ⚠️ Disclaimer
 
-**Personal project** - Use at your own risk. No warranty provided. Not affiliated with any organization.
+This tool is provided **"AS IS"** without warranty of any kind - Use at your own risk. 
+
+No warranty provided. 
+Not affiliated with any organization.
 
 **Enterprise users**: Pin exact versions, review reports before sharing, add `output/` to `.gitignore`.
 

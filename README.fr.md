@@ -348,7 +348,9 @@ Construit avec **ts-morph** (AST TypeScript), **@angular/compiler** (parsing HTM
 
 ## ⚠️ Avertissement
 
-**Projet personnel** - Utilisez à vos risques et périls. Aucune garantie fournie. Non affilié à une organisation.
+This tool is provided **"AS IS"** without warranty of any kind - Use at your own risk.
+- Utilisez à vos risques et périls. 
+- Aucune garantie fournie. Non affilié à une organisation.
 
 **Utilisateurs entreprise** : Verrouillez les versions exactes, vérifiez les rapports avant partage, ajoutez `output/` au `.gitignore`.
 
