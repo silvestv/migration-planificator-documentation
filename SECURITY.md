@@ -61,7 +61,8 @@ Only the following files are included in the published package (defined in `pack
 - `dist/styles.css` - Compiled CSS styles
 - `README.md` - English documentation
 - `README.fr.md` - French documentation
-- `LICENSE` - License information
+- `LICENSE` - Apache 2.0 License
+- `NOTICE` - Copyright and attribution notices
 
 **No sensitive files** (`.env`, credentials, source maps, test files) are included.
 
@@ -76,7 +77,7 @@ We take security vulnerabilities seriously. If you discover a security issue, pl
 **Primary Contact:**
 - **Name:** Victor SILVESTRE
 - **Email:** victor.silvestre.dev@gmail.com
-- **Role:** Freelance Software Engineer (FR) - Angular / NodeJS & TypeScript Developer
+- **Role:** Full-Stack Developer - Angular/Node.js/TypeScript Specialist
 
 ### Reporting Process
 
@@ -104,7 +105,7 @@ We take security vulnerabilities seriously. If you discover a security issue, pl
 
 ---
 
-## 🔐 Security Best Practices
+## 📝 Security Best Practices
 
 ### For Users
 
@@ -118,12 +119,13 @@ When using this tool:
 
 ### For Contributors
 
-When contributing (for future community contributions):
+When contributing:
 
 - Use `npm audit` to check dependencies for vulnerabilities
 - Follow TypeScript strict mode guidelines
 - Never commit secrets, API keys, or credentials
 - Run tests before submitting: `npm test`
+- Sign commits with GPG when possible
 
 ---
 
@@ -156,20 +158,37 @@ npm audit --json
 
 ---
 
-## 🏢 License & Liability
+## 📜 License & Liability
 
-This software is dual-licensed under:
+This software is licensed under the **Apache License, Version 2.0**.
 
-- **AGPL-3.0** (for open-source/community use)
-- **Commercial License** (for business use without AGPL obligations)
+### Key License Terms
+
+- ✅ **Commercial Use** - Allowed for any purpose
+- ✅ **Modification** - Can be modified and distributed
+- ✅ **Distribution** - Can be distributed freely
+- ✅ **Patent Grant** - Includes express grant of patent rights
+- ✅ **Private Use** - Can be used privately without restrictions
+
+### Required When Using
+
+- 📝 Include the LICENSE file
+- 📝 Include the NOTICE file (if present)
+- 📝 State changes made to the code (if modified)
 
 ### Disclaimer
 
-This tool is provided **"AS IS"** without warranty of any kind. See [LICENSE](https://github.com/silvestv/migration-planificator-documentation/blob/master/LICENSE) for full terms.
+This software is provided **"AS IS"** without warranty of any kind, express or implied. See the [LICENSE](LICENSE) file for the full license terms and limitations.
 
-### Commercial Support
+```
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+```
 
-For enterprise security requirements or private security audits:
+### Enterprise Support
+
+For enterprise security requirements, SLAs, or private security audits:
 
 📧 Contact: victor.silvestre.dev@gmail.com
 
@@ -178,10 +197,27 @@ For enterprise security requirements or private security audits:
 ## 📚 Additional Resources
 
 - 📦 [NPM Package](https://www.npmjs.com/package/@silvestv/migration-planificator)
-- 📧 [Contact for Support](mailto:victor.silvestre.dev@gmail.com)
+- 📖 [Apache 2.0 License Text](http://www.apache.org/licenses/LICENSE-2.0)
+- 🔐 [npm Security Documentation](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities)
+- 📧 [Security Contact](mailto:victor.silvestre.dev@gmail.com)
 
 ---
 
-**Last Updated:** January 2025
+## 🏢 Corporate Usage
 
-© 2025 Victor SILVESTRE - All rights reserved
+This project is suitable for use in enterprise environments:
+
+- ✅ **Clear licensing** under Apache 2.0
+- ✅ **No GPL dependencies** that could affect your proprietary code
+- ✅ **Patent protection** included in the license
+- ✅ **Professional support** available upon request
+
+---
+
+**Last Updated:** January 2025  
+**Version:** Aligned with Apache License 2.0
+
+© 2025 Victor SILVESTRE
+
+Licensed under the Apache License, Version 2.0. You may obtain a copy of the License at:
+http://www.apache.org/licenses/LICENSE-2.0

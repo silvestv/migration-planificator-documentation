@@ -9,8 +9,7 @@ Plan Angular migrations (17→18, 18→19, 19→20) with precision AST analysis,
 [![Node.js](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/typescript-5.9-blue)](https://www.typescriptlang.org/)
 [![Tests](https://img.shields.io/badge/tests-451%20passing-success)](./tests)
-[![License](https://img.shields.io/badge/license-AGPL--3.0%20OR%20Commercial-blue)](./LICENSE)
-[![Status](https://img.shields.io/badge/status-alpha-orange)](https://www.npmjs.com/package/@silvestv/migration-planificator)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)[![Status](https://img.shields.io/badge/status-alpha-orange)](https://www.npmjs.com/package/@silvestv/migration-planificator)
 
 **[🇬🇧 English](https://github.com/silvestv/migration-planificator-documentation/blob/master/README.md) | [🇫🇷 Français](https://github.com/silvestv/migration-planificator-documentation/blob/master/README.fr.md)**
 
@@ -313,27 +312,43 @@ For urgent issues, security concerns, or commercial inquiries:
 **Enterprise users**: Contact us for commercial licensing, priority support, and custom features.
 
 ---
-
 ## 📝 License
 
-**Dual Licensed** © 2025 Victor Louis SILVESTRE
+© 2025 Victor SILVESTRE
 
-This project is available under two licenses:
+Licensed under the **Apache License, Version 2.0** (the "License").
+You may not use this file except in compliance with the License.
+You may obtain a copy of the License at:
 
-### 1. AGPL-3.0 (Free for Non-Commercial Use)
-For individuals, students, researchers, non-profits, and open-source projects.
+http://www.apache.org/licenses/LICENSE-2.0
 
-**Requirements if you distribute or provide as a service**:
-- ✅ Make your complete source code available under AGPL-3.0
-- ✅ Share all modifications publicly
-- ✅ Include copyright and license notices
+### Key Terms
 
-### 2. Commercial License (For Business Use)
-For companies that need to use this software without AGPL obligations.
+- ✅ **Commercial Use** - Freely use for any purpose including commercial
+- ✅ **Modification** - Modify and distribute your own versions
+- ✅ **Distribution** - Redistribute the original or modified versions
+- ✅ **Patent Grant** - Includes express grant of patent rights from contributors
+- ✅ **Private Use** - Use privately without any obligations
 
-📧 Contact: victor.silvestre.dev@gmail.com
+### Requirements
 
-See [LICENSE](https://github.com/silvestv/migration-planificator-documentation/blob/master/LICENSE).
+When distributing or modifying:
+- 📝 Include the LICENSE file
+- 📝 Include the NOTICE file (if present)
+- 📝 State any significant changes made to the code
+
+### Disclaimer
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+See [LICENSE](LICENSE) for the full license text.
+
+📧 **Contact**: victor.silvestre.dev@gmail.com
+
 
 
 ## 🙏 Acknowledgments
@@ -343,17 +358,6 @@ Built with **ts-morph** (TypeScript AST), **@angular/compiler** (HTML parsing), 
 ---
 
 **🚀 Start planning your Angular migration today!**
-
----
-
-## ⚠️ Disclaimer
-
-This tool is provided **"AS IS"** without warranty of any kind - Use at your own risk. 
-
-No warranty provided. 
-Not affiliated with any organization.
-
-**Enterprise users**: Pin exact versions, review reports before sharing, add `output/` to `.gitignore`.
 
 ---
 
