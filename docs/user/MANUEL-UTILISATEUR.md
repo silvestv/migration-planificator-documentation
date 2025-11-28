@@ -92,7 +92,7 @@ Ces temps sont donc (en version Alpha) purement indicatif.
 
 ### Chantier à venir
 
-De nouvelles releases sont à venir et amélioreront grandement la précision de l'outil. 
+De nouvelles releases sont à venir et amélioreront grandement la précision de l'outil.
 Objectif de précision >= 95 %.
 
 Ces améliorations arriveront courant des mois d'Octobre, Novembre et Décembre 2025.
@@ -101,7 +101,7 @@ Ces améliorations arriveront courant des mois d'Octobre, Novembre et Décembre 
 
 Conseils : lire tout le document au préalable.
 
-Voir cette section => 
+Voir cette section =>
 [Futur](#-8-futur--migration-automatique-par-ia)
 ---
 
@@ -109,7 +109,7 @@ Voir cette section =>
 
 ### Qu'est-ce que l'Angular Migration Planner ?
 
-L'Angular Migration Planner est un outil professionnel qui **analyse automatiquement** votre projet Angular et calcule la charge de travail nécessaire pour migrer vers les versions 18, 19 ou 20.
+L'Angular Migration Planner est un outil professionnel qui **analyse automatiquement** votre projet Angular et calcule la charge de travail nécessaire pour migrer vers les versions 18, 19, 20 ou 21.
 
 En quelques minutes, vous obtenez :
 - 📊 Une estimation précise de la charge (en jours, heures et minutes)
@@ -218,7 +218,7 @@ migration-planificator --project-path=/chemin/vers/mon-projet
 # Versions à analyser (par défaut : all)
 --rules=18             # Seulement Angular 17→18
 --rules=[18,19]        # Angular 17→18 + 18→19
---rules=all            # Toutes les migrations (17→18, 18→19, 19→20)
+--rules=all            # Toutes les migrations (17→18, 18→19, 19→20, 20→21)
 
 # Chemin du projet (nécessaire si installation globale)
 --project-path=/chemin/vers/projet
@@ -368,6 +368,7 @@ En haut du dashboard, vous pouvez **choisir quelles migrations inclure** :
 - ☑️ **To 18** (Angular 17→18)
 - ☑️ **To 19** (Angular 18→19)
 - ☑️ **To 20** (Angular 19→20)
+- ☑️ **To 21** (Angular 20→21)
 - 🔘 Bouton **"Toutes"** pour sélectionner/désélectionner tout
 
 **Impact en temps réel** : Dès que vous changez la sélection, les KPIs, graphiques, hiérarchie et Gantt se mettent à jour automatiquement.
@@ -502,7 +503,7 @@ Trois barres séquentielles pour To18, To19, To20 avec dates de début/fin.
 - Indicateur de weekend : icône pause ⏸ sur les barres
 
 **Séquençage Strict**
-Les migrations s'exécutent dans l'ordre : **To18 → To19 → To20**
+Les migrations s'exécutent dans l'ordre : **To18 → To19 → To20 → To21**
 La To19 ne peut commencer qu'après la fin de la To18, etc.
 
 #### Tooltips au Survol
@@ -730,7 +731,7 @@ Vous pouvez **personnaliser les estimations de temps** pour les adapter à votre
 Dès la modification :
 - ✅ Le temps de la règle se met à jour instantanément
 - ✅ Propagation **hiérarchique** :
-  - Temps de la règle → Temps de la priorité → Temps de la migration → Temps du target → Temps total projet
+    - Temps de la règle → Temps de la priorité → Temps de la migration → Temps du target → Temps total projet
 - ✅ Les **KPIs** et **graphiques** s'actualisent en temps réel
 - ✅ Le **Gantt** se recalcule avec les nouvelles dates
 
@@ -802,6 +803,7 @@ En haut de la page, choisissez la migration à suivre :
 - **To18** : Angular 17→18
 - **To19** : Angular 18→19
 - **To20** : Angular 19→20
+- **To21** : Angular 20→21
 
 Seules les règles de la migration sélectionnée s'affichent.
 
@@ -951,9 +953,9 @@ Ajouter progressivement les filtres "Recommandé" puis "Optionnel" pour voir l'e
 
 ### Scénarios d'Utilisation
 
-#### Scénario 1 : Migration Complète (17→20)
+#### Scénario 1 : Migration Complète (17→21)
 
-**Objectif** : Passer d'Angular 17 à Angular 20 en une seule fois.
+**Objectif** : Passer d'Angular 17 à Angular 21 en une seule fois.
 
 **Commande** :
 ```bash
@@ -963,9 +965,9 @@ npx migration-planificator --rules=all --scanner=both
 ```
 
 **Actions** :
-1. Consulter le **Gantt** pour visualiser les 3 phases (To18 → To19 → To20)
+1. Consulter le **Gantt** pour visualiser les 4 phases (To18 → To19 → To20 → To21)
 2. Prévoir **plusieurs sprints** selon la charge totale
-3. Organiser la migration en **3 releases** successives
+3. Organiser la migration en **4 releases** successives
 4. Utiliser les **filtres** pour planifier chaque sprint (ex: Sprint 1 = To18 Obligatoire)
 
 ---
@@ -1153,7 +1155,7 @@ Cette vision de **migration automatique par IA** guidera les évolutions futures
 
 ✅ **Vérifications** :
 - Le fichier `angular.json` ou `nx.json` existe-t-il à la racine du projet ?
-- Votre projet est-il Angular 17, 18, 19 ou 20 ?
+- Votre projet est-il Angular 17, 18, 19, 20 ou 21 ?
 - Les fichiers de configuration sont-ils valides (JSON bien formé) ?
 
 Si votre projet est plus ancien (Angular < 17), mettez-le à jour vers Angular 17 d'abord avant d'utiliser cet outil.
@@ -1180,7 +1182,7 @@ Oui, utilisez les **filtres** pour masquer les règles non pertinentes.
 **Approches** :
 - Décochez les règles **Optionnelles** si vous voulez vous concentrer sur l'essentiel
 - Filtrez par **catégorie** pour exclure certains domaines (ex: exclure "Test" temporairement)
-- Utilisez le **sélecteur de migrations** pour exclure To19 et To20 si vous ne migrez que vers Angular 18
+- Utilisez le **sélecteur de migrations** pour exclure To19, To20 et To21 si vous ne migrez que vers Angular 18
 
 **Attention** : Les règles **Obligatoires** ne peuvent pas être ignorées sans risque d'échec de build.
 
@@ -1193,12 +1195,12 @@ La détection est **100% automatique**, aucune configuration requise !
 
 **Mécanisme** :
 1. L'outil cherche `nx.json` à la racine du projet
-   - ✅ Trouvé → Mode **Nx Monorepo** activé
-   - ❌ Pas trouvé → Mode **Angular Standalone** activé
+    - ✅ Trouvé → Mode **Nx Monorepo** activé
+    - ❌ Pas trouvé → Mode **Angular Standalone** activé
 
 2. L'interface s'adapte automatiquement :
-   - **Nx** : Hiérarchie avec Apps/Libs, graphique "Apps & Libs"
-   - **Standalone** : Hiérarchie simplifiée, pas de graphique Apps/Libs
+    - **Nx** : Hiérarchie avec Apps/Libs, graphique "Apps & Libs"
+    - **Standalone** : Hiérarchie simplifiée, pas de graphique Apps/Libs
 
 **Vous ne devez rien faire !** L'outil détecte et s'adapte.
 

@@ -2,13 +2,13 @@
 
 > **Outil professionnel d'analyse de migrations Angular pour montées de version, refactoring Nx monorepo, et évaluation de dette technique**
 
-Planifiez vos migrations Angular (17→18, 18→19, 19→20) avec analyse AST précise, calculez les charges de travail, et générez des dashboards HTML interactifs.
+Planifiez vos migrations Angular (17→18, 18→19, 19→20, 20→21) avec analyse AST précise, calculez les charges de travail, et générez des dashboards HTML interactifs.
 
 [![npm version](https://img.shields.io/npm/v/@silvestv/migration-planificator.svg)](https://www.npmjs.com/package/@silvestv/migration-planificator)
 [![npm downloads](https://img.shields.io/npm/dm/@silvestv/migration-planificator.svg)](https://www.npmjs.com/package/@silvestv/migration-planificator)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/typescript-5.9-blue)](https://www.typescriptlang.org/)
-[![Tests](https://img.shields.io/badge/tests-451%20passing-success)](tests)
+[![Tests](https://img.shields.io/badge/tests-748%20passing-success)](tests)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)[![Status](https://img.shields.io/badge/statut-alpha-orange)](https://www.npmjs.com/package/@silvestv/migration-planificator)
 
 **[🇬🇧 English](https://github.com/silvestv/migration-planificator-documentation/blob/master/README.md) | [🇫🇷 Français](https://github.com/silvestv/migration-planificator-documentation/blob/master/README.fr.md)**
@@ -23,7 +23,7 @@ Pour toute préoccupation de sécurité ou signaler une vulnérabilité, voir [S
 
 Un **outil d'analyse de migrations Angular** complet pour :
 
-- 🔄 **Migrations Angular** : Planifiez migrations 17→18, 18→19, 19→20 avec estimations précises
+- 🔄 **Migrations Angular** : Planifiez migrations 17→18, 18→19, 19→20, 20→21 avec estimations précises
 - 🏢 **Monorepo Nx** : Analysez workspaces multi-apps/libs avec détail par target
 - 📊 **Dette Technique** : Identifiez APIs dépréciées, anti-patterns, opportunités de modernisation
 - 💰 **Estimation Charge** : Calculez temps (jours/heures/minutes) par priorité et niveau de risque
@@ -39,7 +39,7 @@ Contrairement aux scanners regex simples ou audits manuels :
 
 - ✅ **88% Couverture AST** : Détection contextuelle élimine faux positifs (ignore commentaires, strings, code migré)
 - ✅ **Intelligence Cross-File** : Connecte TypeScript ↔ templates HTML (détecte patterns `@Component` + `<router-outlet>`)
-- ✅ **Production-Ready** : 451 tests réussis, TypeScript strict mode, batch processing optimisé
+- ✅ **Production-Ready** : 748 tests réussis, TypeScript strict mode, batch processing optimisé
 - ✅ **Gain de Temps** : Calcul charge auto + timeline Gantt = roadmap migration instantanée
 - ✅ **Zéro Dépendances** : Analyse AST pure avec ts-morph + @angular/compiler (pas d'APIs externes)
 
@@ -50,7 +50,7 @@ Contrairement aux scanners regex simples ou audits manuels :
 - **Précision AST** : Détection contextuelle via ts-morph + @angular/compiler (88% règles)
 - **Dashboard Interactif** : Rapport HTML avec charts, timeline Gantt, édition temps réel
 - **3 Modes Scan** : AST (précis), Regex (rapide), Both (comparatif avec analyse delta)
-- **85+ Règles Migration** : Couvrant breaking changes, dépréciations, best practices
+- **119 Règles Migration** : Couvrant breaking changes, dépréciations, best practices (to18, to19, to20, to21)
 - **Analyse Cross-File** : Détection TypeScript ↔ templates HTML
 - **Multi-Projets** : Support Nx Monorepo et Angular Standalone
 
@@ -59,7 +59,7 @@ Contrairement aux scanners regex simples ou audits manuels :
 ## 🎓 Cas d'Usage
 
 ### Migration Version Angular
-Upgrade Angular 17→20 avec liste complète changements et estimations :
+Upgrade Angular 17→21 avec liste complète changements et estimations :
 ```bash
 npx @silvestv/migration-planificator --scanner=both --rules=all --project-path=/path/to/angular-app
 ```
@@ -199,13 +199,14 @@ npm run report -- --scanner=both        # Comparative AST vs Regex
 
 ## 📋 Règles Migration
 
-**85 règles** sur 3 versions :
+**119 règles** sur 4 versions :
 
 | Migration | Obligatoires | Recommandées | Optionnelles | Total |
 |-----------|--------------|--------------|--------------|-------|
 | **17→18** | 8            | 17           | 0            | 25    |
 | **18→19** | 15           | 13           | 9            | 37    |
 | **19→20** | 6            | 7            | 5            | 18    |
+| **20→21** | 21           | 6            | 12           | 39    |
 
 ### Catégories
 `environment` (versions Node/TS) • `imports` (modules) • `api` (APIs Angular) • `routing` (Router) • `template` (directives) • `test` (tests) • `ssr` (SSR) • `reactive` (Signals)
@@ -232,7 +233,7 @@ npm run build
 ### Rapport Vide
 - Vérifier `--project-path` pointe vers racine Angular
 - Vérifier présence `angular.json` ou `nx.json`
-- Support Angular 17, 18, 19, 20
+- Support Angular 17, 18, 19, 20, 21
 
 ---
 
