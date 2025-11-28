@@ -259,9 +259,7 @@ For security concerns or to report vulnerabilities, see [SECURITY.md](https://gi
 
 ## 🤝 Contributing & Support
 
-This project uses a **dual-license model**:
-- **AGPL-3.0 License** for community/open-source use
-- **Commercial License** available for enterprise support and features
+This project is licensed under **Apache License 2.0** - free for commercial and open-source use.
 
 ### 🐛 Report a Bug
 

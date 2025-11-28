@@ -259,9 +259,7 @@ Pour toute préoccupation de sécurité ou signaler une vulnérabilité, voir [S
 
 ## 🤝 Contribuer & Support
 
-Ce projet utilise un **modèle double-licence** :
-- **Licence AGPL-3.0** pour usage communautaire/open-source
-- **Licence Commerciale** disponible pour support et fonctionnalités entreprise
+Ce projet est sous licence **Apache License 2.0** - libre pour usage commercial et open-source.
 
 ### 🐛 Signaler un Bug
 
