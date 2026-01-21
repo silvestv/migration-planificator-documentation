@@ -1,6 +1,6 @@
 {
   "name": "@silvestv/migration-planificator",
-  "version": "7.0.0",
+  "version": "7.1.0",
   "description": "Professional Angular migration analysis tool with AST precision for version upgrades (17→18, 18→19, 19→20, 20→21), Nx monorepo refactoring, workload estimation, and technical debt assessment. Interactive HTML reports with Gantt timeline and real-time editing.",
   "main": "dist/src/index.js",
   "publishConfig": {
