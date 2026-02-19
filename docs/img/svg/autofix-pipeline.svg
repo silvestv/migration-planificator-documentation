@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1080" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#22c55e"/>
+    </marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="1080" rx="16" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="360" y="42" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">Pipeline Agent Auto-Fix</text>
+  <text x="360" y="64" text-anchor="middle" font-size="12" fill="#64748b">Workflow de l'agent IA lors de la résolution d'une règle de migration Angular</text>
+
+  <!-- ===== STEP 0 : CLI ===== -->
+  <rect x="180" y="88" width="360" height="52" rx="26" fill="#6366f1" filter="url(#shadow)"/>
+  <text x="360" y="112" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">npx migration-planificator fix --rule=RULE_KEY</text>
+  <text x="360" y="128" text-anchor="middle" font-size="10.5" fill="#c7d2fe">Scan AST → Génère 4 fichiers prompts</text>
+
+  <!-- Arrow 0→1 -->
+  <line x1="360" y1="140" x2="360" y2="162" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===== STEP 1 : READ ===== -->
+  <rect x="180" y="166" width="360" height="44" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="208" y="192" font-size="13" fill="#334155"><tspan font-weight="600" fill="#6366f1">1.</tspan>  L'agent lit  <tspan font-weight="600">constitution.md</tspan> + <tspan font-weight="600">context.md</tspan> + <tspan font-weight="600">ledger.json</tspan></text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="360" y1="210" x2="360" y2="232" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===== STEP 2 : PRECONDITIONS ===== -->
+  <rect x="180" y="236" width="360" height="56" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="180" y="236" width="4" height="56" rx="2" fill="#f59e0b"/>
+  <text x="208" y="258" font-size="13" fill="#334155"><tspan font-weight="600" fill="#f59e0b">2.</tspan>  <tspan font-weight="600">Préconditions</tspan></text>
+  <text x="208" y="278" font-size="11" fill="#64748b">Git clean · Bonne branche · Build OK · Tests OK · (Nx version)</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="360" y1="292" x2="360" y2="314" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- STOP label -->
+  <text x="555" y="270" font-size="10" fill="#ef4444" font-weight="600">Échec → STOP</text>
+  <line x1="540" y1="264" x2="556" y2="264" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- ===== STEP 3 : BRANCH ===== -->
+  <rect x="180" y="318" width="360" height="44" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="180" y="318" width="4" height="44" rx="2" fill="#22c55e"/>
+  <text x="208" y="345" font-size="13" fill="#334155"><tspan font-weight="600" fill="#22c55e">3.</tspan>  Création branche  <tspan font-family="monospace" font-size="11.5" fill="#6366f1">feat/ai-migration-{rule}</tspan></text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="360" y1="362" x2="360" y2="384" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===== STEP 4 : DRY-RUN ===== -->
+  <rect x="180" y="388" width="360" height="56" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="180" y="388" width="4" height="56" rx="2" fill="#3b82f6"/>
+  <text x="208" y="410" font-size="13" fill="#334155"><tspan font-weight="600" fill="#3b82f6">4.</tspan>  <tspan font-weight="600">Plan de migration</tspan> (Dry-run)</text>
+  <text x="208" y="430" font-size="11" fill="#64748b">L'agent propose une checklist → Vous validez (O / N / M)</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="360" y1="444" x2="360" y2="466" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Decision labels -->
+  <text x="555" y="412" font-size="10" fill="#ef4444" font-weight="600">N → Annulé</text>
+  <text x="555" y="436" font-size="10" fill="#f59e0b" font-weight="600">M → Modifier le plan</text>
+
+  <!-- ===== STEP 5 : IMPLEMENTATION ===== -->
+  <rect x="140" y="470" width="440" height="100" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="140" y="470" width="4" height="100" rx="2" fill="#8b5cf6"/>
+  <text x="168" y="494" font-size="13" fill="#334155"><tspan font-weight="600" fill="#8b5cf6">5.</tspan>  <tspan font-weight="600">Implémentation</tspan> (selon le type de règle)</text>
+
+  <!-- 4 sub-types -->
+  <rect x="168" y="506" width="116" height="28" rx="6" fill="#f0e7fe"/>
+  <text x="226" y="524" text-anchor="middle" font-size="9.5" font-weight="600" fill="#7c3aed">Schematic + Agent</text>
+
+  <rect x="292" y="506" width="82" height="28" rx="6" fill="#ede9fe"/>
+  <text x="333" y="524" text-anchor="middle" font-size="9.5" font-weight="600" fill="#7c3aed">LLM seul</text>
+
+  <rect x="382" y="506" width="82" height="28" rx="6" fill="#e8e0fd"/>
+  <text x="423" y="524" text-anchor="middle" font-size="9.5" font-weight="600" fill="#7c3aed">Complexe</text>
+
+  <rect x="472" y="506" width="90" height="28" rx="6" fill="#e0d7fc"/>
+  <text x="517" y="524" text-anchor="middle" font-size="9.5" font-weight="600" fill="#7c3aed">Env. Migration</text>
+
+  <text x="168" y="558" font-size="10.5" fill="#64748b">L'agent modifie les fichiers et met à jour le <tspan font-weight="600">ledger.json</tspan> après chaque batch</text>
+
+  <!-- Arrow 5→6 -->
+  <line x1="360" y1="570" x2="360" y2="592" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===== STEP 6 : VALIDATION ===== -->
+  <rect x="140" y="596" width="440" height="164" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="140" y="596" width="4" height="164" rx="2" fill="#06b6d4"/>
+  <text x="168" y="620" font-size="13" fill="#334155"><tspan font-weight="600" fill="#06b6d4">6.</tspan>  <tspan font-weight="600">Validation</tspan> (boucle jusqu'au succès)</text>
+
+  <!-- 6A -->
+  <rect x="168" y="634" width="390" height="30" rx="6" fill="#ecfeff" stroke="#a5f3fc" stroke-width="1"/>
+  <text x="186" y="654" font-size="11.5" fill="#0e7490"><tspan font-weight="700">A</tspan>   Re-scan AST → 0 occurrences restantes ?</text>
+
+  <!-- 6B -->
+  <rect x="168" y="670" width="390" height="30" rx="6" fill="#ecfeff" stroke="#a5f3fc" stroke-width="1"/>
+  <text x="186" y="690" font-size="11.5" fill="#0e7490"><tspan font-weight="700">B</tspan>   Build → Compile sans erreur ?</text>
+
+  <!-- 6C -->
+  <rect x="168" y="706" width="390" height="30" rx="6" fill="#ecfeff" stroke="#a5f3fc" stroke-width="1"/>
+  <text x="186" y="726" font-size="11.5" fill="#0e7490"><tspan font-weight="700">C</tspan>   Tests → Tous les tests passent ?</text>
+
+  <!-- Error loop arrow -->
+  <path d="M 558 680 C 610 680, 620 560, 560 540" stroke="#ef4444" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arrow-red)"/>
+  <text x="612" y="612" font-size="10" fill="#ef4444" font-weight="600" transform="rotate(-70 612 612)">Échec → Corriger</text>
+  <text x="624" y="650" font-size="10" fill="#ef4444" font-weight="600" transform="rotate(-70 624 650)">+ MAJ ledger</text>
+
+  <!-- Safety box -->
+  <rect x="168" y="742" width="390" height="14" rx="3" fill="#fef2f2"/>
+  <text x="363" y="752" text-anchor="middle" font-size="9" fill="#dc2626" font-weight="600">⛔ Anti-oscillation (même erreur ×2) · Max 5 itérations → ABORT, pas de PR</text>
+
+  <!-- Arrow 6→7 -->
+  <line x1="360" y1="760" x2="360" y2="786" stroke="#22c55e" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="378" y="778" font-size="10" fill="#22c55e" font-weight="600">Tout OK</text>
+
+  <!-- ===== STEP 7 : COMMIT ===== -->
+  <rect x="180" y="790" width="360" height="80" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="180" y="790" width="4" height="80" rx="2" fill="#22c55e"/>
+  <text x="208" y="814" font-size="13" fill="#334155"><tspan font-weight="600" fill="#22c55e">7.</tspan>  <tspan font-weight="600">Commit &amp; Push</tspan></text>
+  <text x="208" y="834" font-size="11" fill="#64748b">git commit -m "fix(migration): {rule} — ..."</text>
+  <text x="208" y="850" font-size="11" fill="#64748b">git push origin feat/ai-migration-{rule}</text>
+  <text x="208" y="866" font-size="11" fill="#64748b">Finalise ledger.json → status: success</text>
+
+  <!-- Arrow 7→END -->
+  <line x1="360" y1="870" x2="360" y2="896" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===== STEP 8 : REPORT ===== -->
+  <rect x="180" y="900" width="360" height="44" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="180" y="900" width="4" height="44" rx="2" fill="#6366f1"/>
+  <text x="208" y="927" font-size="13" fill="#334155"><tspan font-weight="600" fill="#6366f1">8.</tspan>  Re-génère les <tspan font-weight="600">5 rapports HTML</tspan> mis à jour</text>
+
+  <!-- Arrow 8→END -->
+  <line x1="360" y1="944" x2="360" y2="970" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===== END ===== -->
+  <rect x="260" y="974" width="200" height="42" rx="21" fill="#22c55e" filter="url(#shadow)"/>
+  <text x="360" y="1000" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">✅ Migration terminée</text>
+
+  <!-- ===== LEGEND ===== -->
+  <text x="360" y="1044" text-anchor="middle" font-size="10" fill="#94a3b8">Créez ensuite une Pull Request manuellement dans GitHub / Bitbucket</text>
+
+  <!-- Footer -->
+  <text x="360" y="1070" text-anchor="middle" font-size="9" fill="#cbd5e1">Migration Planificator — Auto-Fix Agent Pipeline</text>
+</svg>
